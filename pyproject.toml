@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "wordly"
+version = "0.1.0"
+description = ""
+authors = ["Feoktistov Andrei"]
+readme = "README.md"
+packages = [{include = "wordly"}]
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+djangorestframework = "^3.14.0"
+django-filter = "^23.1"
+Markdown = "^3.4.3"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
