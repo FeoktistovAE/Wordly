@@ -13,6 +13,7 @@ django-filter = "^23.1"
 Markdown = "^3.4.3"
 psycopg2-binary = "^2.9.6"
 djoser = "^2.2.0"
+python-dotenv = "^1.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
