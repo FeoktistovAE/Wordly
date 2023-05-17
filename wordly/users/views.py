@@ -1,12 +1,10 @@
-from django.shortcuts import render
-# from django.views import View
-
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 
 from wordly.users.models import User
 from wordly.users.serializers import UserSerializer
+
 
 # Create your views here.
 class UsersIndexView(APIView):
@@ -24,4 +22,7 @@ class UserCreateView(APIView):
         serializer_for_writing = UserSerializer(data=request.data)
         serializer_for_writing.is_valid()
         serializer_for_writing.save()
-        return Response(data=serializer_for_writing.data, status=status.HTTP_201_CREATED)
+        return Response(
+            data=serializer_for_writing.data,
+            status=status.HTTP_201_CREATED,
+        )
